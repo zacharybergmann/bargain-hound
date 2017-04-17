@@ -21,5 +21,5 @@ MongoClient.connect(process.env.MONGOURI, (err, database) => {
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/public/index.html`);
+  res.sendFile(__dirname + '/public/index.html');
 });
