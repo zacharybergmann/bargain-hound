@@ -19,10 +19,11 @@ MongoClient.connect(process.env.MONGOURI, (err, database) => {
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/public/index.html`);
-});
+// app.get('/', (req, res) => {
+//   res.sendFile(`${__dirname}/public/index.html`);
+// });
 
 app.post('/quotes', (req, res) => {
   db.collection('quotes').save(req.body, (err) => {

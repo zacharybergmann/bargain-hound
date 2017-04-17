@@ -1,17 +1,18 @@
 {
   "name": "immersion-2017-03-mvp",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Simple Investment Advisor App",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "start2": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zacharybergmann/immersion-2017-03-mvp.git"
   },
-  "author": "",
+  "author": "zbbergma@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zacharybergmann/immersion-2017-03-mvp/issues"
@@ -19,8 +20,10 @@
   "homepage": "https://github.com/zacharybergmann/immersion-2017-03-mvp#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
+    "jquery": "^3.2.1",
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.5"
   },

@@ -3,14 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>My Website</title>
-    <link rel="stylesheet" href="./webpage.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
+      <div class="container">
+        <h1>Hello World!</h1>
 
-    <form action="/quotes" method="POST">
-      <input type="text" placeholder="name" name="name">
-      <input type="text" placeholder="quote" name="quote">
-      <button type="submit">Submit</button>
-  </body>    
-</html>  
+        <form action="/quotes" method="POST">
+          <input type="text" placeholder="name" name="name">
+          <input type="text" placeholder="quote" name="quote">
+          <button class="btn btn-danger" type="submit">Submit</button>
+        </form>
+      </div>
+    </body>
+</html>
