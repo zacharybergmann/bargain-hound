@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8">
     <title>My Website</title>
@@ -8,17 +8,31 @@
     <script src="lib/jquery.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js"></script>
     <script src="app.js"></script>
   </head>
   <body>
       <div class="container">
-        <h1>Hello World!</h1>
+        <h1>Welcome to Stock Central!</h1>
+
+        <a href="#/login">Log In</a>
+        <a href="#/signup">Sign Up</a>
+        <a href="#/mydash">My Stock Dashboard</a>
 
         <form action="/quotes" method="POST">
           <input type="text" placeholder="name" name="name">
           <input type="text" placeholder="quote" name="quote">
           <button class="btn btn-danger" type="submit">Submit</button>
         </form>
+        <div ng-controller="DashboardController">
+          <ul>
+            <li ng-repeat="stock in stocks">
+              <span>{{stock.name}}</span>
+              <p>{{stock.price}}</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </body>
 </html>
