@@ -1,0 +1,28 @@
+{
+  "name": "immersion-2017-03-mvp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zacharybergmann/immersion-2017-03-mvp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zacharybergmann/immersion-2017-03-mvp/issues"
+  },
+  "homepage": "https://github.com/zacharybergmann/immersion-2017-03-mvp#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.5"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
+  }
+}
