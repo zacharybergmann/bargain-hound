@@ -36,3 +36,6 @@ bower_components/
 
 #env file
 .env
+
+#linter
+.eslintrc.js
