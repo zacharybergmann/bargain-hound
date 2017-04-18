@@ -50,6 +50,7 @@ app.use(express.static('public'));
 
 
 
+
 const Schema = mongoose.Schema;
 const Q = require('q');
 
@@ -127,9 +128,41 @@ app.put('/users/*/*/*/*/*/*', (req, res) => {
 //       res.sendStatus(200);
 //     });
 // });
+const request = require('request');
+const Papa = require('papaparse');
 
-
-app.get('/financials', (req, res) => {
-  console.log(req.params, 'financials req.params');
-
+app.get('/financials/*', (req, res) => {
+  console.log(req.params, 'what parameters do we have to split?');
+  const myParas = req.params[0].split('/');
+  console.log(myParas);
+  let yUrl = 'http://finance.yahoo.com/d/quotes.csv?s=';
+  for (let i = 0; i < myParas.length; i += 1) {
+    if(i === 0) {
+      yUrl += `${myParas[i]}`;
+    } else {
+      yUrl += `+${myParas[i]}`;
+    }
+  }
+  yUrl += '&f=nsabkjj4b4ep6p5rr5dj3';
+  request(yUrl, (error, response, body) => {
+    if (!error && response.statusCode === 200) {
+      const bodyWHeaders = `name,symbol,ask,bid,52wkhigh,52wklow,ebitda, bookvalue,eps,priceperbook,pricepersales,priceperearningsrat,pegratio,dividendpershare,marketcap\n${body}`;
+      //need to send the data back down to the component!
+      Papa.parse(bodyWHeaders, {
+        header: true,
+        complete: objData => res.send(JSON.stringify(objData)),
+      });
+    }
+  });
 });
+
+
+// const request = require('request');
+
+// const yUrl = 'http://finance.yahoo.com/d/quotes.csv?s=AAPL+GOOG+MSFT&f=nsabkjj4b4ep6p5rr5dj3';
+
+// request(yUrl, (error, response, body) => {
+//   if (!error && response.statusCode === 200) {
+//     console.log(body, 'gettter datat!!!!');
+//   }
+// });
