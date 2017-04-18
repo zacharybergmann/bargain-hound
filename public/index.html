@@ -10,7 +10,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/dashboard/dashboard.module.js"></script>
+    <script src="app/dashboard/dashboard.component.js"></script>
   </head>
   <body>
       <div class="container">
@@ -21,18 +23,10 @@
         <a href="#/mydash">My Stock Dashboard</a>
 
         <form action="/quotes" method="POST">
-          <input type="text" placeholder="name" name="name">
-          <input type="text" placeholder="quote" name="quote">
+          <input type="text" placeholder="Stock Name" name="name">
           <button class="btn btn-danger" type="submit">Submit</button>
         </form>
-        <div ng-controller="DashboardController">
-          <ul>
-            <li ng-repeat="stock in stocks">
-              <span>{{stock.name}}</span>
-              <p>{{stock.price}}</p>
-            </li>
-          </ul>
-        </div>
+        <dashboard></dashboard>
       </div>
     </body>
 </html>

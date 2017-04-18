@@ -1,19 +1,8 @@
-const app = angular.module('app', [
+angular.module('app', [
   'ngRoute',
   'ngResource',
+  'dashboard',
 ])
-.controller('DashboardController', ($scope) => {
-  $scope.stocks = [
-    {
-      name: 'AAPL',
-      price: '$140.00',
-    },
-    {
-      name: 'SLB',
-      price: '$80.00',
-    },
-  ];
-})
 .config(($routeProvider) => {
   $routeProvider
     .when('/signup', {
