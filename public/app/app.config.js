@@ -1,20 +1,20 @@
 angular
   .module('app')
-  .config(['$locationProvider', '$routeProvider', ($locationProvider, $routeProvider) => {
+  .config(['$locationProvider', '$routeProvider', function config($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
 
     $routeProvider
       .when('/signup', {
         templateUrl: 'app/templates/signup.template.html',
-        controller: 'SignUpController',
+        controller: 'signUp',
       })
       .when('/login', {
         templateUrl: 'app/templates/login.template.html',
-        controller: 'LogInController',
+        controller: 'logIn',
       })
       .when('/mydash', {
         templateUrl: 'app/templates/my_stock.template.html',
-        controller: 'MyStockController',
+        controller: 'myStock',
       }).otherwise({
         redirectTo: '/',
       });

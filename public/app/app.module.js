@@ -1,4 +1,8 @@
 angular.module('app', [
   'ngRoute',
-  'dashboard',
+  'ngResource',
+  'dashBoard',
+  'signUp',
+  'logIn',
+  'myStock',
 ]);

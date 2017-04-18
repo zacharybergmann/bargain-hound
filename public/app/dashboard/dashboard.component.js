@@ -1,6 +1,6 @@
 angular
-  .module('dashboard')
-  .component('dashboard', {
+  .module('dashBoard')
+  .component('dashBoard', {
     templateUrl: 'app/dashboard/dashboard.template.html',
     controller: ['$http', function DashboardController($http) {
       const thisRef = this;
