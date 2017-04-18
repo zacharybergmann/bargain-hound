@@ -9,31 +9,25 @@
     <script src="lib/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js"></script> -->
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
     <script src="app/dashboard/dashboard.module.js"></script>
     <script src="app/dashboard/dashboard.component.js"></script>
-    <script src="app/login/login.module.js"></script>
-    <script src="app/login/login.component.js"></script>
-    <script src="app/signup/signup.module.js"></script>
-    <script src="app/signup/signup.component.js"></script>
-    <script src="app/userStocks/user_stock.module.js"></script>
-    <script src="app/userStocks/user_stock.component.js"></script>
   </head>
   <body>
       <div class="container">
         <h1>Welcome to Stock Central!</h1>
 
-        <a href="#/login">Log In</a>
-        <a href="#/signup">Sign Up</a>
-        <a href="#/mydash">My Stock Dashboard</a>
+        <a href="#!/login">Log In</a>
+        <a href="#!/signup">Sign Up</a>
+        <a href="#!/dashboard">My Stock Dashboard</a>
 
         <form action="/quotes" method="POST">
           <input type="text" placeholder="Stock Name" name="name">
           <button class="btn btn-danger" type="submit">Submit</button>
         </form>
-        <dashboard></dashboard>
+        <div ng-view></div>
       </div>
     </body>
 </html>

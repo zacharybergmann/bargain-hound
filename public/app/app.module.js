@@ -1,8 +1,10 @@
+// angular.module('app', [
+//   'ngRoute',
+//   'ngResource',
+//   'dashBoard',
+// ]);
+
 angular.module('app', [
   'ngRoute',
-  'ngResource',
-  'dashBoard',
-  'signUp',
-  'logIn',
-  'myStock',
+  'dashboard',
 ]);

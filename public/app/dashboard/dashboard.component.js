@@ -1,35 +1,28 @@
-angular
-  .module('dashBoard')
-  .component('dashBoard', {
+angular.
+  module('dashboard').
+  component('dashboard', {
     templateUrl: 'app/dashboard/dashboard.template.html',
-    controller: ['$http', function DashboardController($http) {
-      const thisRef = this;
+    controller: ['$http', function DashBoardController($http) {
+      var self = this;
+      self.orderProp = 'age';
+      const basicData = ['YHOO', 'SLB', 'HAL', 'GE', 'GD', 'VZ', 'PG', 'AAL', 'LUV', 'AMD', 'BP', 'C',
+        'WFC', 'CSCO', 'CMG', 'DIS', 'F', 'GM', 'FB', 'GIS', 'IBKC', 'HD', 'JPM', 'K', 'LMT', 'MMM', 'PEP',
+        'PFE', 'PM', 'RCL', 'TEVA', 'WMT', 'XON'];
 
-      $http({
-        // Access-Control-Allow-Origin
-        method: 'JSONP',  //????? not GET???
-        url: 'http://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=54G6', //fix this URL
-        headers: { 'Access-Control-Allow-Origin': 'localhost:8080' },
-      }).then((response) => {
-        console.log(response, 'response from yahoo!'); //need to fix this!!
-        thisRef.stocks.push(response);
-      })
-        .catch(err => err);
+      this.stocks = [
+        {
+          name: 'WC',
+          price: '$50.00',
+        },
+        {
+          name: 'WFC',
+          price: '$60.00',
+        },
+      ];
 
-
-
-
-
-
-      // this.stocks = [
-      //   {
-      //     name: 'AAPL',
-      //     price: '$140.00',
-      //   },
-      //   {
-      //     name: 'SLB',
-      //     price: '$80.00',
-      //   },
-      // ];
-    }],
+      $http.get('/financials').then(function(response) {
+        console.log(response);
+        //start rendering content to the page by assigning to scope
+      });
+    }]
   });

@@ -1,1 +1,1 @@
-angular.module('dashBoard', []);
+angular.module('dashboard', []);

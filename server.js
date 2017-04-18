@@ -63,10 +63,10 @@ const User = mongoose.model('User', userSchema);
 const findUser = Q.nbind(User.findOne, User);
 const createUser = Q.nbind(User.create, User);
 
-app.get('/users', (req, res) => {
-  findUser({ username: req.body.username }).then((person) => {
+app.get('/users/*', (req, res) => {
+  findUser({ _id: req.params[0] }).then((person) => {
     res.send(person);
-  });
+  }).catch(err => res.send(500));
 });
 
 app.post('/users', (req, res) => {
@@ -88,27 +88,48 @@ app.post('/users', (req, res) => {
   .catch(() => res.sendStatus(500));
 });
 
-app.put('/users', (req, res) => {
-  User.update(
-    { username: req.body.username },
-    { $push: { trackedStocks: req.body.stock } },
-    (err) => {
-      if (err) {
-        res.sendStatus(500);
-      }
-      res.sendStatus(200);
-    });
+app.put('/users/*/*/*/*/*/*', (req, res) => {
+  console.log(req.params, 'req paramssssss');
+  if(req.params[5] === 'remove') {
+    User.update(
+      { _id: req.params[1] },
+      { $pull: { trackedStocks: req.params[3] } },
+      (err) => {
+        if (err) {
+          res.sendStatus(500);
+        }
+        res.sendStatus(200);
+      });
+  } else if (req.params[5] === 'add') {
+    User.update(
+      { _id: req.params[1] },
+      { $push: { trackedStocks: req.params[3] } },
+      (err) => {
+        if (err) {
+          res.sendStatus(500);
+        }
+        res.sendStatus(200);
+      });
+  } else {
+    res.send(400);
+  }
 });
 
-app.delete('/users', (req, res) => {
-  User.update(
-    { username: req.body.username },
-    { $pull: { trackedStocks: req.body.stock } },
-    false,
-    (err) => {
-      if (err) {
-        res.sendStatus(500);
-      }
-      res.sendStatus(200);
-    });
+// app.delete('/users', (req, res) => {
+//   User.update(
+//     { username: req.body.username },
+//     { $pull: { trackedStocks: req.body.stock } },
+//     false,
+//     (err) => {
+//       if (err) {
+//         res.sendStatus(500);
+//       }
+//       res.sendStatus(200);
+//     });
+// });
+
+
+app.get('/financials', (req, res) => {
+  console.log(req.params, 'financials req.params');
+
 });

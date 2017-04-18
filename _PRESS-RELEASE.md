@@ -17,28 +17,34 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > StockAssurance
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > The target audience for this app is anyone who is interested in financial markets and investing in stocks, most significantly people who use smaller personal brokerage accounts like Scottrade or Fidelity among others.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > This app leverages the extensive financial information available to the general public and applies key metrics that investors use to select the most promising stocks.
+  > With this tool, you can determine with ease whether or not a stock is worth investigating further and possibly purchasing.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Too much financial information is available on the market but only made available to those who are willing to pay top dollar for access.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > The app that I have created uses green, red, and yellow highlighting on key metrics that investors use to determine if a stock is a good buy or not. 
+  > Using this, it is easy to get a good idea whether a stock should be further considered and investigated as a high return stock.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > Picking the right stock is all about using the massive amounts of data that are available to you, good luck and happy investing! 
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Simply go to the homepage and you will get a dashboard view with many different stocks. If you have stocks that you would like to follow, create an account, 
+  > search for a stock that you are interested in, and click on it to start tracking that stock. From then forward, that stock will be maintained on your 
+  > account dashboard to continue tracking.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > This app changed my life, I can now invest in stocks with confidence that the financials and base of the company are strong without paying thousands of dollars
+  > a year in brokerage costs.
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Use the app and make sure that you utilize other information sources to get up to speed on any stocks that you consider investing. Remember to check the news 
+  > and other rating sources to increase confidence in investments and ensure that nothing significant has happened to the company within the last few days.
