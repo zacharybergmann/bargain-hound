@@ -2,7 +2,7 @@ angular
   .module('signup')
   .component('signup', {
     templateUrl: 'app/signup/signup.template.html',
-    controller: ['$http', '$scope', function SignUpController($http, $scope) {
+    controller: ['$http', '$rootScope', function SignUpController($http, $rootScope) {
       const signup = (username, password) => {
         if (username !== '' && password !== '') {
           $http({
@@ -13,7 +13,7 @@ angular
               password,
             }),
           }).then((success) => {
-            $scope.id = success.data._id;
+            $rootScope.id = success.data._id;
           }).catch(err => err);
         }
       };
