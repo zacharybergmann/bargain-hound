@@ -152,10 +152,10 @@ app.get('/financials/*', (req, res) => {
       yUrl += `+${myParas[i]}`;
     }
   }
-  yUrl += '&f=nsabkjj4b4ep6p5rr5dj3p2';
+  yUrl += '&f=nsabkjj4b4ep6p5rr5dj3p2yt8s6';
   request(yUrl, (error, response, body) => {
     if (!error && response.statusCode === 200) {
-      const bodyWHeaders = `name,symbol,ask,bid,52wkhigh,52wklow,ebitda,bookvalue,eps,priceperbook,pricepersales,priceperearningsrat,pegratio,dividendpershare,marketcap,percentchange\n${body}`;
+      const bodyWHeaders = `name,symbol,ask,bid,52wkhigh,52wklow,ebitda,bookvalue,eps,priceperbook,pricepersales,priceperearningsrat,pegratio,dividendpershare,marketcap,percentchange,dividendyield,oneyrtarget,revenue\n${body}`;
       // need to send the data back down to the component!
       Papa.parse(bodyWHeaders, {
         header: true,

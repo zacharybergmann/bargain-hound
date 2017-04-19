@@ -1,7 +1,11 @@
 
-<h1> CHANGLEEJLKAJFLKASFDJLASKDFNLKGN</h1>
+
 <br />
 <br />
+<form name="addStockForm">
+  <span>Add Another Stock: </span><input type="text" placeholder="Stock Index" ng-model="stockToAdd"></input>
+  <button type="submit" ng-click="$ctrl.addStock(stockToAdd)">Track Stock!</button>
+</form>
 <ul style="list-style:none">
   <li class="row" ng-repeat="stock in $ctrl.stocks">
     <div class="col-md-6">

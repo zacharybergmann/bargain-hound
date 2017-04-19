@@ -9,9 +9,9 @@
     <script src="lib/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js"></script> -->
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
+    <script src="./page.controller.js"></script>
     <script src="app/dashboard/dashboard.module.js"></script>
     <script src="app/dashboard/dashboard.component.js"></script>
     <script src="app/mydash/mydash.module.js"></script>
@@ -25,14 +25,12 @@
       <div class="container">
         <h1>Welcome to Stock Central!</h1>
 
+        <!--<a href="logout.html" ng-click="">Log Out</a>-->
         <a href="#!/login">Log In</a>
         <a href="#!/signup">Sign Up</a>
-        <a href="#!/mydash">My Stock Dashboard</a>
+        <a href="#!/dashboard">Main Dashboard</a>
+        <a href="#!/mydash">My Tracked Stocks Dashboard</a>
 
-        <!--<form action="/quotes" method="POST">
-          <input type="text" placeholder="Stock Name" name="name">
-          <button class="btn btn-danger" type="submit">Submit</button>
-        </form>-->
         <div ng-view></div>
       </div>
     </body>
