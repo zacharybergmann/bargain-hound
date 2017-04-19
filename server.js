@@ -70,6 +70,15 @@ app.get('/users/*', (req, res) => {
   }).catch(() => res.send(500));
 });
 
+app.get('/login/*/*', (req, res) => {
+  findUser({ username: req.params[0], password: req.params[1] }).then((person) => {
+    if (person === null) {
+      return res.statusCode(400);
+    }
+    return res.send(person);
+  }).catch(() => res.statusCode(500));
+});
+
 app.post('/users', (req, res) => {
   findUser({
     username: req.body.username,
@@ -127,6 +136,7 @@ app.put('/users/*/*/*/*/*/*', (req, res) => {
 //       res.sendStatus(200);
 //     });
 // });
+
 const request = require('request');
 const Papa = require('papaparse');
 

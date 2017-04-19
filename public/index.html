@@ -16,6 +16,10 @@
     <script src="app/dashboard/dashboard.component.js"></script>
     <script src="app/mydash/mydash.module.js"></script>
     <script src="app/mydash/mydash.component.js"></script>
+    <script src="app/signup/signup.module.js"></script>
+    <script src="app/signup/signup.component.js"></script>
+    <script src="app/login/login.module.js"></script>
+    <script src="app/login/login.component.js"></script>
   </head>
   <body>
       <div class="container">
@@ -25,10 +29,10 @@
         <a href="#!/signup">Sign Up</a>
         <a href="#!/mydash">My Stock Dashboard</a>
 
-        <form action="/quotes" method="POST">
+        <!--<form action="/quotes" method="POST">
           <input type="text" placeholder="Stock Name" name="name">
           <button class="btn btn-danger" type="submit">Submit</button>
-        </form>
+        </form>-->
         <div ng-view></div>
       </div>
     </body>

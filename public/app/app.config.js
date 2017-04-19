@@ -11,6 +11,12 @@ angular
         .when('/mydash', {
           template: '<mydash></mydash>',
         })
+        .when('/signup', {
+          template: '<signup></signup>',
+        })
+        .when('/login', {
+          template: '<login></login>',
+        })
         .otherwise('/dashboard');
     },
   ]);
