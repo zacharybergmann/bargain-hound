@@ -7,6 +7,10 @@ angular
       $routeProvider
         .when('/dashboard', {
           template: '<dashboard></dashboard>',
-        });
+        })
+        .when('/mydash', {
+          template: '<mydash></mydash>',
+        })
+        .otherwise('/dashboard');
     },
   ]);

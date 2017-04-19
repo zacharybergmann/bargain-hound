@@ -67,7 +67,7 @@ const createUser = Q.nbind(User.create, User);
 app.get('/users/*', (req, res) => {
   findUser({ _id: req.params[0] }).then((person) => {
     res.send(person);
-  }).catch(err => res.send(500));
+  }).catch(() => res.send(500));
 });
 
 app.post('/users', (req, res) => {
@@ -90,8 +90,7 @@ app.post('/users', (req, res) => {
 });
 
 app.put('/users/*/*/*/*/*/*', (req, res) => {
-  console.log(req.params, 'req paramssssss');
-  if(req.params[5] === 'remove') {
+  if (req.params[5] === 'remove') {
     User.update(
       { _id: req.params[1] },
       { $pull: { trackedStocks: req.params[3] } },
@@ -137,17 +136,17 @@ app.get('/financials/*', (req, res) => {
   console.log(myParas);
   let yUrl = 'http://finance.yahoo.com/d/quotes.csv?s=';
   for (let i = 0; i < myParas.length; i += 1) {
-    if(i === 0) {
+    if (i === 0) {
       yUrl += `${myParas[i]}`;
     } else {
       yUrl += `+${myParas[i]}`;
     }
   }
-  yUrl += '&f=nsabkjj4b4ep6p5rr5dj3';
+  yUrl += '&f=nsabkjj4b4ep6p5rr5dj3p2';
   request(yUrl, (error, response, body) => {
     if (!error && response.statusCode === 200) {
-      const bodyWHeaders = `name,symbol,ask,bid,52wkhigh,52wklow,ebitda, bookvalue,eps,priceperbook,pricepersales,priceperearningsrat,pegratio,dividendpershare,marketcap\n${body}`;
-      //need to send the data back down to the component!
+      const bodyWHeaders = `name,symbol,ask,bid,52wkhigh,52wklow,ebitda,bookvalue,eps,priceperbook,pricepersales,priceperearningsrat,pegratio,dividendpershare,marketcap,percentchange\n${body}`;
+      // need to send the data back down to the component!
       Papa.parse(bodyWHeaders, {
         header: true,
         complete: objData => res.send(JSON.stringify(objData)),

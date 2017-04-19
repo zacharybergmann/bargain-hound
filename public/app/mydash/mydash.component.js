@@ -1,7 +1,7 @@
 angular
-  .module('dashboard')
-  .component('dashboard', {
-    templateUrl: 'app/dashboard/dashboard.template.html',
+  .module('mydash')
+  .component('mydash', {
+    templateUrl: 'app/mydash/mydash.template.html',
     controller: ['$http', function DashBoardController($http) {
       this.orderProp = 'age';
       const basicData = ['YHOO', 'SLB', 'HAL', 'GE', 'GD', 'VZ', 'PG', 'AAL', 'LUV', 'AMD', 'BP', 'C',
