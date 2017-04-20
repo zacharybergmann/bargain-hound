@@ -6,6 +6,11 @@
   <button class="btn btn-default btn-sm" style="margin-bottom: 4px" type="submit" ng-click="$ctrl.addStock(stockToAdd); stockToAdd=''">Track Stock!</button>
 </form>
 <br />
+<div ng-show="!$ctrl.stocks">
+  <br />
+  <br />
+  <h1> Start adding stocks to track! </h1>
+</div>  
 <ul style="list-style:none">
   <li class="row jumbotron indajumbo" ng-repeat="stock in $ctrl.stocks">
     <div class="col-md-2">
@@ -44,6 +49,7 @@
       <div ng-click="$ctrl.deleteStock(stock.symbol)" id="deleteStock" style="font-size:2em; color:red">&#10006;</div>
     </div>  
     <!--<hr>-->
+    
     <br />    
   </li>
 </ul>
