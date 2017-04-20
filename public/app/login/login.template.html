@@ -1,9 +1,13 @@
 <div id="login">
-  <h1>Welcome Back!</h1>
+  <br />
+  <br />
+  <br />
+  <br />
+  <h2> Already a member: Log In! </h2>
   <form name="loginForm">
     <input type="text" ng-model="username">
     <input type="password" ng-model="password">
-    <button ng-click="$ctrl.login(username, password)" type="submit">Log In!</button>
+    <button ng-click="$ctrl.login(username, password); username=''; password=''" type="submit">Log In!</button>
   </form>
   <a href="#/signup">Don't have an account? <strong>Sign Up</strong> ...</a>
 </div>

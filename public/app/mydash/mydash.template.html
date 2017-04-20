@@ -1,28 +1,49 @@
 
-
 <br />
 <br />
 <form name="addStockForm">
   <span>Add Another Stock: </span><input type="text" placeholder="Stock Index" ng-model="stockToAdd"></input>
-  <button type="submit" ng-click="$ctrl.addStock(stockToAdd)">Track Stock!</button>
+  <button type="submit" ng-click="$ctrl.addStock(stockToAdd); stockToAdd=''">Track Stock!</button>
 </form>
+<br />
 <ul style="list-style:none">
   <li class="row" ng-repeat="stock in $ctrl.stocks">
-    <div class="col-md-6">
+    <div class="col-md-2">
+      <br />
       <h2>{{stock.symbol}}</h2>
       <h3>{{stock.name}}</h3>
+      <h2>{{stock.percentchange}}</h2>
     </div>
     <div class="col-md-3">
       <br />
-      <h4>Bid: {{stock.bid}}</h4>
-      <h4>Ask: {{stock.ask}}</h4>
+      <h4 ng-class="{ 'color-yellow': stock.pegratio < 1.2, 'color-green': stock.pegratio < 1.0, 'color-red': stock.pegratio >= 1.2 }">Price/Earnings Ratio (PEGR): {{stock.pegratio}}</h4>
+      <h4 ng-class="{ 'color-yellow': stock.priceperbook < 3.0, 'color-green': stock.priceperbook < 2.0, 'color-red': stock.priceperbook >= 3.0 }">Price/Book: {{stock.priceperbook}}</h4>
+      <h4 ng-class="{ 'color-yellow': stock.pricepersales < 2.0, 'color-green': stock.pricepersales < 1.0, 'color-red': stock.pricepersales >= 2.0 }">Price/Sales: {{stock.pricepersales}}</h4>
+      <h4>EBITDA: {{stock.ebitda}}</h4>
+      <h4>Dividends per Share: {{stock.dividendpershare}}</h4>
     </div> 
     <div class="col-md-3">
-      <h6>52 Week High: {{stock['52wkhigh']}}</h6>
-      <h6>52 Week Low: {{stock['52wklow']}}</h6>
-      <h2>{{stock.percentchange}}</h2>
+      <br />
+      <h4 <h4 ng-class="{ 'color-yellow': stock.priceperearningsrat > 12.0, 'color-green': stock.priceperearningsrat <= 12.0, 'color-red': stock.priceperearningsrat >= 16.0 }">Price/Earnings: {{stock.priceperearningsrat}}</h4>
+      <h4 ng-class="{ 'color-yellow': stock.dividendyield < 2, 'color-green': stock.dividendyield >= 2.0, 'color-red': stock.dividendyield <1.5 }">Dividend Yield: {{stock.dividendyield}}</h4>
+      <h4> Revenue: {{stock.revenue}}</h4>
+      <h4>Earnings Per Share: {{stock.eps}}</h4>
+      <h4>Market Cap: {{stock.marketcap}}</h4>
     </div>
-    <hr /
-    <br />   
+    <div class="col-md-3">
+      <br />
+      <h6>52 Week High: {{stock['52wkhigh']}}</h6>
+      <h6>52 Week Low: {{stock['52wklow']}}</h6> 
+      <h6>Ask: {{stock.ask}}</h6>
+      <h6>Bid: {{stock.bid}}</h6>
+      <h4>1 Year Target: {{stock.oneyeartarget}}</h4>
+    </div> 
+    <div class="col-md-1">
+      <br />
+      <br />
+      <div ng-click="$ctrl.deleteStock(stock.symbol)" id="deleteStock" style="font-size:2em; color:red">&#10006;</div>
+    </div>  
+    <hr>
+    <br />    
   </li>
 </ul>

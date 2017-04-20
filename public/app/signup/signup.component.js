@@ -2,7 +2,7 @@ angular
   .module('signup')
   .component('signup', {
     templateUrl: 'app/signup/signup.template.html',
-    controller: ['$http', '$rootScope', function SignUpController($http, $rootScope) {
+    controller: ['$http', '$rootScope', '$location', function SignUpController($http, $rootScope, $location) {
       const signup = (username, password) => {
         if (username !== '' && password !== '') {
           $http({
@@ -14,6 +14,7 @@ angular
             }),
           }).then((success) => {
             $rootScope.id = success.data._id;
+            $location.path('/mydash');
           }).catch(err => err);
         }
       };

@@ -33,6 +33,17 @@ angular
             }).catch(err => err);
         }
       };
+
+      const deleteStock = (symb) => {
+        $http.put(`/users/id/${$rootScope.id}/stock/${symb}/type/remove`)
+          .then((res) => {
+            console.log(res);
+            this.init();
+          }).catch(err => err);
+
+        };
+
+      this.deleteStock = deleteStock;
       this.addStock = addStock;
       this.init = init;
     }],
