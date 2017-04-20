@@ -15,7 +15,7 @@ angular
           }).then((success) => {
             $rootScope.id = success.data._id;
             $location.path('/mydash');
-          }).catch(err => err);
+          }).catch(err => console.log('not ok'));
         }
       };
       this.signup = signup;

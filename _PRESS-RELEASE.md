@@ -1,5 +1,5 @@
 # Project Name #
-
+>Bargin Hound
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
 
@@ -17,34 +17,35 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > StockAssurance
+  > Bargin Hound
 
 ## Sub-Heading ##
-  > The target audience for this app is anyone who is interested in financial markets and investing in stocks, most significantly people who use smaller personal brokerage accounts like Scottrade or Fidelity among others.
+  > The target audience for this app is anyone who is interested in financial markets and investing in stocks, most significantly people who use smaller personal brokerage accounts like Scottrade or Fidelity among others. More specifically, this app assists customers identify stocks that could be significantly undervalued.
 
 ## Summary ##
-  > This app leverages the extensive financial information available to the general public and applies key metrics that investors use to select the most promising stocks.
-  > With this tool, you can determine with ease whether or not a stock is worth investigating further and possibly purchasing.
+  > This app leverages the extensive financial information available to the general public and applies key metrics that investors use to select the most promising stocks undervalued stocks. With this tool, you can determine with ease whether or not a stock is worth investigating further and possibly purchasing.
 
 ## Problem ##
-  > Too much financial information is available on the market but only made available to those who are willing to pay top dollar for access.
+  > Too much financial information is available on the market but only made available to those who are willing to pay top dollar for access/knowledge.
 
 ## Solution ##
-  > The app that I have created uses green, red, and yellow highlighting on key metrics that investors use to determine if a stock is a good buy or not. 
-  > Using this, it is easy to get a good idea whether a stock should be further considered and investigated as a high return stock.
+  > The app that I have created uses green, red, and yellow highlighting on key metrics that investors use to determine if a stock is a good bargin buy or not. 
+  > Using this, it is easy to get a good idea whether a stock should be further considered and investigated as having high return potential.
 
 ## Quote from You ##
-  > Picking the right stock is all about using the massive amounts of data that are available to you, good luck and happy investing! 
+  > Picking the right stock is all about using the massive amounts of data that are available to you, happy hunting! 
 
 ## How to Get Started ##
   > Simply go to the homepage and you will get a dashboard view with many different stocks. If you have stocks that you would like to follow, create an account, 
-  > search for a stock that you are interested in, and click on it to start tracking that stock. From then forward, that stock will be maintained on your 
-  > account dashboard to continue tracking.
+  > search for a stock symbol that you are interested in, and it will be automatically tracked. From then forward, that stock will be maintained on your 
+  > account dashboard to continue tracking. If you ever desire not to continue following that stock, simply click the x button to remove tracking. Key metrics for 
+  > stocks are flashing on the screen in green, yellow, and red colors. Green signifies significant potential as a bargain stock on that metric, yellow is ok, and red
+  > suggests that this is likely not a bargain stock.
 
 ## Customer Quote ##
-  > This app changed my life, I can now invest in stocks with confidence that the financials and base of the company are strong without paying thousands of dollars
-  > a year in brokerage costs.
+  > This app has made stock hunting a breeze. I can identify stocks with a huge upside just by adding them to my watchlist. After I get a good lead on a stocks, I can check the news and other outlets to get more information on the company to determine how well rounded they are. 
 
 ## Closing and Call to Action ##
   > Use the app and make sure that you utilize other information sources to get up to speed on any stocks that you consider investing. Remember to check the news 
-  > and other rating sources to increase confidence in investments and ensure that nothing significant has happened to the company within the last few days.
+  > and other rating sources to increase confidence in investments and ensure that nothing significant has happened to the company within the last few days. If you
+  > find a bargain stock and want to give us a shout-out, give us a howl: Barooooogain Hound on Facebook, @barooooogainhound on Twitter.
