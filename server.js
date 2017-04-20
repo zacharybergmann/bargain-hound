@@ -25,32 +25,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-
-
-
-// var allowCrossDomain = function(req, res, next) {
-//     if ('OPTIONS' == req.method) {
-//       res.header('Access-Control-Allow-Origin', 'localhost:8080');
-//       res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
-//       res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
-//       res.send(200);
-//     }
-//     else {
-//       next();
-//     }
-// };
-//
-// app.use(allowCrossDomain);
-
-
-
-
-
-
-
-
-
-
 const Schema = mongoose.Schema;
 const Q = require('q');
 
@@ -124,26 +98,11 @@ app.put('/users/*/*/*/*/*/*', (req, res) => {
   }
 });
 
-// app.delete('/users', (req, res) => {
-//   User.update(
-//     { username: req.body.username },
-//     { $pull: { trackedStocks: req.body.stock } },
-//     false,
-//     (err) => {
-//       if (err) {
-//         res.sendStatus(500);
-//       }
-//       res.sendStatus(200);
-//     });
-// });
-
 const request = require('request');
 const Papa = require('papaparse');
 
 app.get('/financials/*', (req, res) => {
-  console.log(req.params, 'what parameters do we have to split?');
   const myParas = req.params[0].split('/');
-  console.log(myParas);
   let yUrl = 'http://finance.yahoo.com/d/quotes.csv?s=';
   for (let i = 0; i < myParas.length; i += 1) {
     if (i === 0) {
@@ -164,14 +123,3 @@ app.get('/financials/*', (req, res) => {
     }
   });
 });
-
-
-// const request = require('request');
-
-// const yUrl = 'http://finance.yahoo.com/d/quotes.csv?s=AAPL+GOOG+MSFT&f=nsabkjj4b4ep6p5rr5dj3';
-
-// request(yUrl, (error, response, body) => {
-//   if (!error && response.statusCode === 200) {
-//     console.log(body, 'gettter datat!!!!');
-//   }
-// });

@@ -13,7 +13,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
-    <script src="./page.controller.js"></script>
     <script src="app/dashboard/dashboard.module.js"></script>
     <script src="app/dashboard/dashboard.component.js"></script>
     <script src="app/mydash/mydash.module.js"></script>
@@ -25,17 +24,11 @@
   </head>
   <body>
       <div class="container">
-        <h1>Welcome to BAROOOOOgain Hound!</h1>
-        <h3>We're always sniffin' around for a howlin' good deal</h3>
+        <h1 class="coheader">BAROOOOOgain Hound!</h1>
+        <h3 class="cophrase">We're always sniffin' around for a howlin' good deal</h3>
         <br />
         
         <nav class="row">
-          <!--<a class="col-md-2 a" style="border: 1px solid brown" ng-show="!id" href="#!/login">Log In</a>
-          <a class="col-md-2 a" ng-show="!!id" style="border: 1px solid brown" href="logout.html">Log Out</a>
-          <a class="col-md-2 a" style="border: 1px solid brown" href="#!/signup">Sign Up</a>
-          <a class="col-md-4 a" style="border: 1px solid brown" href="#!/dashboard">Main Dashboard</a>
-          <a class="col-md-4 a" style="border: 1px solid brown" href="#!/mydash">My Tracked Stocks</a>-->
-
           <div class="btn-group btn-group-lg row col-md-12" style="margin-left: 25px" role="group" aria-label="...">
             <button type="button" ng-show="!id" class="btn btn-default col-md-2"><a class="a" href="#!/login">Log In</a></button>
             <button type="button" ng-show="!!id" ng-click="$location.setItem('id', undefined)" class="btn btn-default col-md-2"><a class="a" href="#!/dashboard">Log Out</a></button>
@@ -43,7 +36,6 @@
             <button type="button" class="btn btn-default col-md-4"><a class="a" href="#!/dashboard">Main Dashboard</a></button>
             <button type="button" class="btn btn-default col-md-4"><a class="a" href="#!/mydash">My Tracked Stocks</a></button>
           </div>
-
         </nav>
 
         <img style="text-align: right; position: absolute; margin-top: -200px; margin-left: 450px;" src="./barkingdog.png" alt="barking-dog-image"/>
