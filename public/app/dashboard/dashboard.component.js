@@ -3,8 +3,8 @@ angular
   .component('dashboard', {
     templateUrl: 'app/dashboard/dashboard.template.html',
     controller: ['$http', function DashBoardController($http) {
-      const basicData = ['YHOO', 'SLB', 'HAL', 'GE', 'GD', 'VZ', 'PG', 'AAL', 'LUV', 'AMD', 'BP', 'C',
-        'WFC', 'CSCO', 'CMG', 'DIS', 'F', 'GM', 'FB', 'GIS', 'IBKC', 'HD', 'JPM', 'K', 'LMT', 'MMM', 'PEP',
+      const basicData = ['YHOO', 'AAL', 'AMD', 'IBKC', 'FB', 'CSCO', 'SLB', 'HAL', 'GE', 'GD', 'VZ', 'PG', 'LUV', 'BP', 'C',
+        'WFC', 'CMG', 'DIS', 'F', 'GM', 'GIS', 'HD', 'JPM', 'K', 'LMT', 'MMM', 'PEP',
         'PFE', 'PM', 'RCL', 'TEVA', 'WMT', 'XON'];
 
       let makeEndpoint = '/financials';

@@ -2,8 +2,8 @@
 <br />
 <br />
 <form name="addStockForm">
-  <span>Add Another Stock: </span><input type="text" placeholder="Stock Index" ng-model="stockToAdd"></input>
-  <button type="submit" ng-click="$ctrl.addStock(stockToAdd); stockToAdd=''">Track Stock!</button>
+  <span style="font-size: 1.5em">Add Another Stock:   </span><input type="text" placeholder="Stock Index" ng-model="stockToAdd"></input>
+  <button class="btn btn-default btn-sm" style="margin-bottom: 4px" type="submit" ng-click="$ctrl.addStock(stockToAdd); stockToAdd=''">Track Stock!</button>
 </form>
 <br />
 <ul style="list-style:none">
@@ -25,7 +25,7 @@
     <div class="col-md-3">
       <br />
       <h4 <h4 ng-class="{ 'color-yellow': stock.priceperearningsrat > 12.0, 'color-green': stock.priceperearningsrat <= 12.0, 'color-red': stock.priceperearningsrat >= 16.0 }">Price/Earnings: {{stock.priceperearningsrat}}</h4>
-      <h4 ng-class="{ 'color-yellow': stock.dividendyield < 2, 'color-green': stock.dividendyield >= 2.0, 'color-red': stock.dividendyield <1.5 }">Dividend Yield: {{stock.dividendyield}}</h4>
+      <h4 ng-class="{ 'color-yellow': stock.dividendyield < 2, 'color-green': stock.dividendyield >= 2.0, 'color-red': stock.dividendyield <1.5 }">Dividend Yield: {{stock.dividendyield}}<i ng-class="{'fa fa-paws': stock.dividendyield > 2.0}"></i></h4>
       <h4> Revenue: {{stock.revenue}}</h4>
       <h4>Earnings Per Share: {{stock.eps}}</h4>
       <h4>Market Cap: {{stock.marketcap}}</h4>
@@ -47,3 +47,7 @@
     <br />    
   </li>
 </ul>
+
+
+
+<!--<i class="fa fa-paw" aria-hidden="true"></i>-->

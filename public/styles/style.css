@@ -54,6 +54,15 @@ hr {
   animation: pulseyellow 1s infinite;
 }
 
+#headers {
+  background-color: #d39d4c;
+  color: #77360d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  margin-left: 25px;
+}
+
 @keyframes pulsegreen {
   0% {
     background: #EDE574;  /* fallback for old browsers */
