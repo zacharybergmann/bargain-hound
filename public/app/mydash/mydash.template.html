@@ -7,7 +7,7 @@
 </form>
 <br />
 <ul style="list-style:none">
-  <li class="row" ng-repeat="stock in $ctrl.stocks">
+  <li class="row jumbotron" ng-repeat="stock in $ctrl.stocks">
     <div class="col-md-2">
       <br />
       <h2>{{stock.symbol}}</h2>
@@ -43,7 +43,7 @@
       <br />
       <div ng-click="$ctrl.deleteStock(stock.symbol)" id="deleteStock" style="font-size:2em; color:red">&#10006;</div>
     </div>  
-    <hr>
+    <!--<hr>-->
     <br />    
   </li>
 </ul>

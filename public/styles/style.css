@@ -3,6 +3,7 @@ body {
   background: -webkit-linear-gradient(to right, #E1F5C4, #EDE574);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #E1F5C4, #EDE574); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-align: center;
+  font-family: 'Copse', serif;
 }
 
 a {
@@ -16,9 +17,9 @@ a:hover {
   color: #894306;
 }
 
-nav {
-  background-color: #24994b;
-}
+/*nav {
+  /*background-color: #24994b;*/
+/*}*/
 
 img {
   width: 500px;
