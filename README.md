@@ -10,7 +10,7 @@ Bargain Hound is an application for identifying publically traded stocks that ma
 
 ![Bargain Hound Dashboard](./bargainhound.jpg?raw=true "Wireframes")
 
-### Tech
+### Tech Stack
 
 LangSnap uses a number of open source projects to help you learn!:
 
