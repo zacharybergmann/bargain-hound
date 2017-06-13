@@ -39,3 +39,4 @@ bower_components/
 
 #linter
 .eslintrc.js
+docker-compose.yml
