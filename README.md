@@ -8,7 +8,7 @@ Bargain Hound is an application for identifying publically traded stocks that ma
   - User friendly UI/UX to make it plain simple to identify a bargain stock worth researching further
   - Personalized dashboard for tracking stocks of interest and see if/when they are a bargain
 
-![Bargain Hound Dashboard](./bargain_hound.jpg?raw=true "Wireframes")
+![Bargain Hound Dashboard](./bargainhound.jpg?raw=true "Wireframes")
 
 ### Tech
 
