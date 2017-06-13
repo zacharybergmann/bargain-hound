@@ -2,8 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const Q = require('q');
 
-const app = express();
+const server = express();
 const PORT = process.env.PORT || 8080;
 
 const options = {
@@ -16,35 +17,30 @@ const conn = mongoose.connection;
 
 conn.on('error', console.error.bind(console, 'MongoDB error'));
 conn.once('open', () => {
-  app.listen(PORT, () => {
+  server.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
   });
 });
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true }));
+server.use(express.static('../public'));
 
-const Schema = mongoose.Schema;
-const Q = require('q');
+module.exports.server = server;
+module.exports.mongoose = mongoose;
 
-const userSchema = new Schema({
-  username: { type: String, unique: true, required: true },
-  password: { type: String, required: true },
-  trackedStocks: Array,
-});
+const User = require('./models/user');
 
-const User = mongoose.model('User', userSchema);
 const findUser = Q.nbind(User.findOne, User);
 const createUser = Q.nbind(User.create, User);
 
-app.get('/users/*', (req, res) => {
+server.get('/users/*', (req, res) => {
   findUser({ _id: req.params[0] }).then((person) => {
     res.send(person);
   }).catch(() => res.send(500));
 });
 
-app.get('/login/*/*', (req, res) => {
+server.get('/login/*/*', (req, res) => {
   findUser({ username: req.params[0], password: req.params[1] }).then((person) => {
     if (person === null) {
       return res.statusCode(400);
@@ -53,7 +49,7 @@ app.get('/login/*/*', (req, res) => {
   }).catch(() => res.statusCode(500));
 });
 
-app.post('/users', (req, res) => {
+server.post('/users', (req, res) => {
   findUser({
     username: req.body.username,
   })
@@ -72,7 +68,7 @@ app.post('/users', (req, res) => {
   .catch(() => res.sendStatus(500));
 });
 
-app.put('/users/*/*/*/*/*/*', (req, res) => {
+server.put('/users/*/*/*/*/*/*', (req, res) => {
   if (req.params[5] === 'remove') {
     User.update(
       { _id: req.params[1] },
@@ -101,7 +97,7 @@ app.put('/users/*/*/*/*/*/*', (req, res) => {
 const request = require('request');
 const Papa = require('papaparse');
 
-app.get('/financials/*', (req, res) => {
+server.get('/financials/*', (req, res) => {
   const myParas = req.params[0].split('/');
   let yUrl = 'http://finance.yahoo.com/d/quotes.csv?s=';
   for (let i = 0; i < myParas.length; i += 1) {
