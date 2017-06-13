@@ -12,7 +12,7 @@ Bargain Hound is an application for identifying publically traded stocks that ma
 
 ### Tech Stack
 
-LangSnap uses a number of open source projects to help you learn!:
+Bargain Hound uses a number of open source projects to help you learn!:
 
 ![Bargain Hound Tech Stack](./bargainhound_tech_stack.jpg?raw=true "Tech Stack")
 
