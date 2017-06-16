@@ -1,5 +1,5 @@
 {
-  "name": "Bargain Hound",
+  "name": "bargain-hound",
   "version": "1.0.0",
   "description": "Identifying publically traded stocks that may be a bargain",
   "engines": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zacharybergmann/bargain-hound-app.git"
+    "url": "git+https://github.com/zacharybergmann/bargain-hound.git"
   },
   "author": "zbbergma@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zacharybergmann/bargain-hound-app/issues"
+    "url": "https://github.com/zacharybergmann/bargain-hound/issues"
   },
-  "homepage": "https://github.com/zacharybergmann/bargain-hound-app#readme",
+  "homepage": "https://github.com/zacharybergmann/bargain-hound#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "bootstrap": "^3.3.7",
@@ -31,6 +31,7 @@
     "jquery": "^3.2.1",
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.5",
+    "morgan": "^1.8.2",
     "papaparse": "^4.2.0",
     "q": "^1.5.0",
     "request": "^2.81.0"
