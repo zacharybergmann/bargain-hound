@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 
 const options = {
   server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },

@@ -1,7 +1,7 @@
 FROM node:7
-RUN mkdir /bargain-hound-app
-ADD . /bargain-hound-app
-WORKDIR /bargain-hound-app
+RUN mkdir /bargain-hound
+ADD . /bargain-hound
+WORKDIR /bargain-hound
 RUN npm i
 EXPOSE 8000
 CMD ["npm", "start"]
