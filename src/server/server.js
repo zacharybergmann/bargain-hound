@@ -13,7 +13,7 @@ const options = {
   },
 };
 
-mongoose.connect(process.env.MONGOURI, options, err => console.error(err));
+mongoose.connect(process.env.DATABASE_URL, options, err => console.error(err));
 const conn = mongoose.connection;
 
 conn.on('error', console.error.bind(console, 'MongoDB error'));
