@@ -7,13 +7,8 @@ const morgan = require('morgan');
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-const options = {
-  auth: {
-    authSource: 'admin',
-  },
-};
 
-mongoose.connect(process.env.DATABASE_URL, options, err => console.error(err));
+mongoose.connect(process.env.DATABASE_URL);
 const conn = mongoose.connection;
 
 conn.on('error', console.error.bind(console, 'MongoDB error'));
