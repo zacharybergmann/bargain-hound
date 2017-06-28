@@ -8,11 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 const options = {
-  server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
-  replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
+  auth: {
+    authSource: 'admin',
+  },
 };
 
-mongoose.connect(process.env.MONGOURI, options);
+mongoose.connect(process.env.MONGO_URI, options, err => console.error(err));
 const conn = mongoose.connection;
 
 conn.on('error', console.error.bind(console, 'MongoDB error'));
